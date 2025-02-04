@@ -1,0 +1,22 @@
+.countainer {
+  background: #141414;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  & h2 {
+    color: white;
+  }
+  & div {
+    display: flex;
+    gap: 2rem;
+    & h3 {
+      color: white;
+    }
+    & img {
+      max-height: 20vh;
+    }
+    & p {
+      color: white;
+    }
+  }
+}
