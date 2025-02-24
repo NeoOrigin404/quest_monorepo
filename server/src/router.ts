@@ -15,10 +15,11 @@ router.post("/api/items", itemActions.add);
 
 // Define program-related routes
 import programActions from "./modules/program/programActions";
+import auth from "./middlewares/auth";
 
 router.get("/api/programs", programActions.browse);
 router.get("/api/programs/:id", programActions.read);
-router.post("/api/programs", programActions.add);
+router.post("/api/programs", auth.checkIfAdmin, programActions.add);
 router.put("/api/programs/;id", programActions.edit);
 router.delete("/api/programs/:id", programActions.destroy);
 
